@@ -3,6 +3,7 @@
 import sys
 import getopt
 import divide.binary_search as dbs
+import divide.merge_sort as dms
 import random
 
 if __name__ == "__main__":
@@ -12,6 +13,7 @@ if __name__ == "__main__":
     分治法: python run.py -d [0-9]
             0: 二分搜索
             1: 二分搜索递归实现
+            2: 归（合）并排序
     '''
 
     argv = sys.argv[1:]
@@ -31,12 +33,16 @@ if __name__ == "__main__":
             print(tips)
             exit(0)
         if opt in ('-d', '--divide'):
-            seq = [6, 9, 14, 16, 19, 22, 23, 29, 33, 39]
-            print("有序数列为：", seq)
-            s = random.choice(seq)
+            if arg in ['0', '1']:
+                seq = [6, 9, 14, 16, 19, 22, 23, 29, 33, 39]
+                print("有序数列为：", seq)
+                s = random.choice(seq)
             if arg == '0':
                 al = dbs.Divide(seq, s)
                 print(al.name, " ", s, '的下标索引为：', al.do())
             if arg == '1':
                 al = dbs.DivideByRecursion(seq, s)
                 print(al.name, " ", s, '的下标索引为：', al.do())
+            if arg == '2':
+                al = dms.Merge()
+                al.do()
