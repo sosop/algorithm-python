@@ -4,6 +4,7 @@ import sys
 import getopt
 import divide.binary_search as dbs
 import divide.merge_sort as dms
+import divide.quick_sort as dqs
 import random
 
 if __name__ == "__main__":
@@ -14,6 +15,7 @@ if __name__ == "__main__":
             0: 二分搜索
             1: 二分搜索递归实现
             2: 归（合）并排序
+            3: 快速排序
     '''
 
     argv = sys.argv[1:]
@@ -45,4 +47,7 @@ if __name__ == "__main__":
                 print(al.name, " ", s, '的下标索引为：', al.do())
             if arg == '2':
                 al = dms.Merge()
+                al.do()
+            if arg == '3':
+                al = dqs.Quick()
                 al.do()

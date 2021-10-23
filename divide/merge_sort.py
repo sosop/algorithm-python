@@ -9,6 +9,7 @@ class Merge(ag.Algorithm):
         super().__init__('分治法-合并排序')
         self._r_list = list(range(1, 30))
 
+    @ag.compute_time
     def do(self):
         random.shuffle(self._r_list)
         print("排序前：", self._r_list)

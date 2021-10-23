@@ -35,3 +35,11 @@ python实现各类常用算法
 
 - 分解成单个元素
 - 逐层合并排序
+
+[代码实现](https://github.com/sosop/algorithm-python/blob/main/divide/merge_sort.py)
+
+#### 快速排序
+
+- 分解：选择基数，小于此基数放在左边，大于此基数放在右边，逐层分解
+- 合并：自然有序
+
