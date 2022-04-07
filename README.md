@@ -1,5 +1,13 @@
 # algorithm-python
-python实现各类常用算法
+## 目录
+
+- [数组](array.md)
+
+
+
+
+
+
 
 ### 分治算法
 
